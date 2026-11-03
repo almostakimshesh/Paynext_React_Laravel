@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Paynext (Laravel 12)
 
 Paynext marketing site + Cashnext-style earning dashboard, converted to Laravel.
@@ -47,3 +48,6 @@ Each user gets a code at signup. In **Profile** they can edit it (4-16 letters/n
 - Contact-form submissions are stored in the `contact_messages` table.
 - "Mark as Completed" on tasks is honor-based; add your own verification if tasks must be proven.
 - Public assets live in `public/assets`.
+=======
+# Paynext_React_Laravel
+>>>>>>> f62ca57758ca699aa3b022c4371fb204ad67587d
