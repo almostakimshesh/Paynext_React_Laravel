@@ -1,0 +1,636 @@
+@extends('layouts.site')
+{{-- @section('title')Paynext - Modern Fintech Website HTML Template@endsection --}}
+{{-- @section('description')Paynext is a modern, responsive, and feature-rich HTML template for fintech startups, digital banks, crypto platforms, payment gateways, and financial services@endsection --}}
+@section('content')     
+    <!-- Start Hero Section -->
+    <section class="cs_hero cs_style_1 cs_white_color cs_heading_bg cs_bg_filed cs_bg_fixed" data-src="{{ asset('assets/img/hero_bg.svg') }}">
+      <div class="container position-relative">
+        <div class="cs_hero_in">
+          <div class="cs_hero_text">
+            <p class="cs_hero_mini_title cs_badge cs_semibold cs_mb_32">Best Transaction Platform</p>
+            <h1 class="cs_hero_title cs_fs_72 cs_white_color cs_mb_32">Effortless Financial Solutions for a Digital World</h1>
+            <p class="cs_hero_subtitle cs_mb_32 cs_fs_20 cs_white_color">The future of fintech at your fingertips—secure, smart, and seamless.</p>
+            <a href="{{ auth()->check() ? route('dashboard') : route('register') }}" class="cs_btn cs_style_1 cs_semibold">
+              <span>Get Started Today</span>
+            </a>
+          </div>
+          <div class="cs_hero_brands">
+            <div class="cs_hero_brand">
+              <img src="{{ asset('assets/img/hero_brand_logo_1.svg') }}" alt="Brand">
+            </div>
+            <div class="cs_hero_brand">
+              <img src="{{ asset('assets/img/hero_brand_logo_2.svg') }}" alt="Brand">
+            </div>
+            <div class="cs_hero_brand">
+              <img src="{{ asset('assets/img/hero_brand_logo_3.svg') }}" alt="Brand">
+            </div>
+          </div>
+          <div class="cs_hero_thumb">
+            <div class="cs_hero_thumb_lg">
+              <img src="{{ asset('assets/img/hero_lg.webp') }}" alt="Thumb">
+            </div>
+            <div class="cs_hero_thumb_sm_1">
+              <img src="{{ asset('assets/img/hero_sm_1.webp') }}" alt="Thumb SM">
+            </div>
+            <div class="cs_hero_thumb_sm_2">
+              <img src="{{ asset('assets/img/hero_sm_2.webp') }}" alt="Thumb SM">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section -->    
+    <!-- Start Service Section -->
+    <div class="cs_height_112 cs_height_lg_70"></div>
+    <div class="container">
+      <div class="cs_section_heading cs_style_1 text-center">
+        <p class="cs_section_subtitle cs_badge cs_accent_color cs_semibold cs_gray_bg_2 cs_mb_16 wow fadeInUp">Services</p>
+        <h2 class="cs_section_title cs_fs_48 text-capitalize mb-0 wow fadeInUp">Transforming financial <br>experiences</h2>
+      </div>
+      <div class="cs_height_64 cs_height_lg_50"></div>
+      <div class="cs_feature_cards_wrapper cs_type_1">
+        <div class="cs_feature_card cs_gray_bg">
+          <div class="cs_feature_card_text text-center">
+            <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Digital Payments</h3>
+            <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Secure and fast online payment for businesses and individuals.</p>
+          </div>
+          <div class="cs_feature_card_thumb position-relative">
+            <img class="cs_lg_img" src="{{ asset('assets/img/card_img_6.webp') }}" alt="card image">
+          </div>
+        </div>
+        <div class="cs_feature_card cs_gray_bg">
+          <div class="cs_feature_card_text text-center">
+            <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Budget Tracking</h3>
+            <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Smart tools to monitor and manage your expenses effortlessly.</p>
+          </div>
+          <div class="cs_feature_card_thumb position-relative">
+            <img class="cs_lg_img" src="{{ asset('assets/img/card_img_7.webp') }}" alt="card image">
+          </div>
+        </div>
+        <div class="cs_feature_card cs_gray_bg">
+          <div class="cs_feature_card_text text-center">
+            <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Loan Management</h3>
+            <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Streamlined loans with flexible repayment options.</p>
+          </div>
+          <div class="cs_feature_card_thumb position-relative">
+            <img class="cs_lg_img" src="{{ asset('assets/img/card_img_8.webp') }}" alt="card image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_112 cs_height_lg_70"></div>
+    <!-- End Service Section -->
+    <!-- Start Feature Section -->
+     <section class="cs_gray_bg_2">
+      <div class="cs_height_112 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_section_heading cs_style_1 text-center">
+          <p class="cs_section_subtitle cs_badge cs_accent_color cs_semibold cs_mb_16 cs_white_bg wow fadeInUp">Features</p>
+          <h2 class="cs_section_title cs_fs_48 text-capitalize mb-0 wow fadeInUp">Cutting-edge features designed <br> for your financial success</h2>
+        </div>
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="cs_feature_cards_wrapper">
+          <div class="cs_feature_card cs_white_bg">
+            <div class="cs_feature_card_text text-center">
+              <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Advanced Security</h3>
+              <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Multi-layer encryption to safeguard your data.</p>
+            </div>
+            <div class="cs_feature_card_thumb position-relative">
+              <img class="cs_lg_img" src="{{ asset('assets/img/card_img_1.webp') }}" alt="card image">
+              <img class="cs_mini_img" src="{{ asset('assets/img/card_mini_img_1.svg') }}" alt="">
+            </div>
+          </div>
+          <div class="cs_feature_card cs_white_bg">
+            <div class="cs_feature_card_text text-center">
+              <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Real-Time Analytics</h3>
+              <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Gain instant insights into your finances data.</p>
+            </div>
+            <div class="cs_feature_card_thumb position-relative">
+              <img class="cs_lg_img" src="{{ asset('assets/img/card_img_2.webp') }}" alt="card image">
+            </div>
+          </div>
+          <div class="cs_feature_card cs_white_bg">
+            <div class="cs_feature_card_text text-center">
+              <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Global Accessibility</h3>
+              <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Manage your finances anytime, anywhere.</p>
+            </div>
+            <div class="cs_feature_card_thumb position-relative">
+              <img class="cs_lg_img" src="{{ asset('assets/img/card_img_3.webp') }}" alt="card image">
+            </div>
+          </div>
+          <div class="cs_feature_card cs_white_bg">
+            <div class="cs_feature_card_text text-center">
+              <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Seamless Budget Collaboration</h3>
+              <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Share and manage budgets with your family or team in real-time.</p>
+            </div>
+            <div class="cs_feature_card_thumb position-relative">
+              <div class="cs_feature_card_thumb_item">
+                <img class="cs_lg_img" src="{{ asset('assets/img/card_img_4_3.webp') }}" alt="card image">
+              </div>
+              <div class="cs_feature_card_thumb_item">
+                <img class="cs_lg_img" src="{{ asset('assets/img/card_img_4_2.webp') }}" alt="card image">
+              </div>
+              <div class="cs_feature_card_thumb_item">
+                <img class="cs_lg_img" src="{{ asset('assets/img/card_img_4_1.webp') }}" alt="card image">
+              </div>
+            </div>
+          </div>
+          <div class="cs_feature_card cs_white_bg">
+            <div class="cs_feature_card_text text-center">
+              <h3 class="cs_feature_card_title cs_fs_24 cs_semibold cs_mb_24">Custom Alerts & Notifications</h3>
+              <p class="cs_feature_card_subtitle cs_fs_18 cs_light mb-0">Get personalized alerts for due payments, account activity, and budget limits.</p>
+            </div>
+            <div class="cs_feature_card_thumb position-relative">
+              <img class="cs_lg_img" src="{{ asset('assets/img/card_img_5.webp') }}" alt="card image">
+              <img class="cs_mini_img" src="{{ asset('assets/img/card_mini_img_2.svg') }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_112 cs_height_lg_70"></div>
+    </section>
+    <!-- End Feature Section -->
+    <!-- Start Work in Process -->
+    <section class="cs_workflow_style_1 cs_heading_bg cs_bg_filed" data-src="{{ asset('assets/img/cta_bg.webp') }}">
+      <div class="cs_height_112 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="row cs_gap_y_32">
+          <div class="col-lg-7">
+            <div class="cs_workflow">
+              <p class="cs_section_minititle cs_badge cs_fs_16 cs_accent_color cs_semibold cs_white_bg cs_mb_16">Workflow</p>
+              <h2 class="cs_cta_title cs_fs_48 cs_white_color cs_mb_32 wow fadeInUp">A Smarter Way to Manage <br> Your Money</h2>
+              <p class="cs_section_subtitle cs_light cs_white_color cs_fs_20 mb-0 mb-0">STake control of your finances with a smarter, more efficient approach to <br> money management. Discover innovative tools, expert insights, and practical strategies to save, invest, and spend wisely.</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="cs_workflow_wrap">
+              <div class="cs_iconbox">
+                <div class="cs_iconbox_icon cs_center">
+                  <img src="{{ asset('assets/img/icon_1.svg') }}" alt="">
+                </div>
+                <div class="cs_iconbox_text">
+                  <h3 class="cs_iconbox_title cs_white_color cs_fs_24 cs_mb_12">Sign Up</h3>
+                  <p class="cs_iconbox_subtitle cs_white_color cs_fs_18 mb-0">Create your account in minutes.</p>
+                </div>
+              </div>
+              <div class="cs_iconbox">
+                <div class="cs_iconbox_icon cs_center">
+                  <img src="{{ asset('assets/img/icon_2.svg') }}" alt="">
+                </div>
+                <div class="cs_iconbox_text">
+                  <h3 class="cs_iconbox_title cs_white_color cs_fs_24 cs_mb_12">Link Accounts</h3>
+                  <p class="cs_iconbox_subtitle cs_white_color cs_fs_18 mb-0">Securely connect your financial accounts.</p>
+                </div>
+              </div>
+              <div class="cs_iconbox">
+                <div class="cs_iconbox_icon cs_center">
+                  <img src="{{ asset('assets/img/icon_3.svg') }}" alt="">
+                </div>
+                <div class="cs_iconbox_text">
+                  <h3 class="cs_iconbox_title cs_white_color cs_fs_24 cs_mb_12">Analyze</h3>
+                  <p class="cs_iconbox_subtitle cs_white_color cs_fs_18 mb-0">Access detailed insights and analytics.</p>
+                </div>
+              </div>
+              <div class="cs_iconbox">
+                <div class="cs_iconbox_icon cs_center">
+                  <img src="{{ asset('assets/img/icon_4.svg') }}" alt="">
+                </div>
+                <div class="cs_iconbox_text">
+                  <h3 class="cs_iconbox_title cs_white_color cs_fs_24 cs_mb_12">Transaction</h3>
+                  <p class="cs_iconbox_subtitle cs_white_color cs_fs_18 mb-0">Send or receive payments effortlessly.</p>
+                </div>
+              </div>
+              <div class="cs_iconbox">
+                <div class="cs_iconbox_icon cs_center">
+                  <img src="{{ asset('assets/img/icon_5.svg') }}" alt="">
+                </div>
+                <div class="cs_iconbox_text">
+                  <h3 class="cs_iconbox_title cs_white_color cs_fs_24 cs_mb_12">Optimize</h3>
+                  <p class="cs_iconbox_subtitle cs_white_color cs_fs_18 mb-0">Use our tools to improve financial decisions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="cs_height_112 cs_height_lg_70"></div>
+    </section>
+    <!-- End Work in Process -->
+    <!-- Start Testimonial Section -->
+    <section class="cs_white_bg">
+      <div class="cs_height_112 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="row cs_gap_x_50 cs_gap_y_50">
+          <div class="col-xl-6">
+            <div class="cs_section_heading_left">
+              <p class="cs_section_minititle cs_badge cs_fs_16 cs_accent_color cs_semibold cs_gray_bg_2 cs_mb_16 wow fadeInDown">TESTIMONIAL</p>
+              <h2 class="cs_section_title mb-0 cs_fs_48">The Stories Trusted <br> by Thousands</h2>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="cs_slider cs_style_1">
+              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
+                <div class="cs_slider_wrapper">
+                  <div class="cs_slide">
+                    <div class="cs_testimonial cs_style_1 wow fadeInUp">
+                      <p class="cs_testimonial_blockquote cs_fs_24 cs_normal cs_mb_32">Paynext has revolutionized the way I manage my finances. The analytics are spot on! I can track every penny with ease, and it’s incredibly user-friendly. Their tools have given me better control over my budgeting.</p>
+                      <hr>
+                      <div class="cs_testimonial_meta">
+                        <img src="{{ asset('assets/img/slider_Image_1.webp') }}" alt="image">
+                        <p class="cs_testimonial_avatar_designation cs_fs_24 cs_semibold cs_heading_color mb-0">Madonna Raul</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs_slide">
+                    <div class="cs_testimonial cs_style_1 wow fadeInUp">
+                      <p class="cs_testimonial_blockquote cs_fs_24 cs_normal cs_mb_32">Paynext has revolutionized the way I manage my finances. The analytics are spot on! I can track every penny with ease, and it’s incredibly user-friendly. Their tools have given me better control over my budgeting.</p>
+                      <hr>
+                      <div class="cs_testimonial_meta">
+                        <img src="{{ asset('assets/img/slider_Image_1.webp') }}" alt="image">
+                        <p class="cs_testimonial_avatar_designation cs_fs_24 cs_semibold cs_heading_color mb-0">Madonna Raul</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cs_slider_arrows cs_style_5">
+                <div class="cs_left_arrow cs_heading_color cs_center rounded-circle">
+                  <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.499953 9.00005C0.499953 8.80823 0.573265 8.61623 0.719703 8.4698L8.2197 0.969797C8.51277 0.676734 8.98733 0.676734 9.2802 0.969797C9.57308 1.26286 9.57327 1.73742 9.2802 2.0303L2.31045 9.00005L9.2802 15.9698C9.57327 16.2629 9.57327 16.7374 9.2802 17.0303C8.98714 17.3232 8.51258 17.3234 8.2197 17.0303L0.719703 9.5303C0.573265 9.38386 0.499953 9.19186 0.499953 9.00005Z" fill="currentColor"/>
+                  </svg>                                   
+                </div>
+                <div class="cs_right_arrow cs_heading_color cs_center rounded-circle">
+                  <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.50005 8.99995C9.50005 9.19177 9.42673 9.38377 9.2803 9.5302L1.7803 17.0302C1.48723 17.3233 1.01267 17.3233 0.719797 17.0302C0.426922 16.7371 0.426734 16.2626 0.719797 15.9697L7.68955 8.99995L0.719797 2.0302C0.426734 1.73714 0.426734 1.26258 0.719797 0.969702C1.01286 0.676826 1.48742 0.67664 1.7803 0.969702L9.2803 8.4697C9.42673 8.61614 9.50005 8.80814 9.50005 8.99995Z" fill="currentColor"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_height_64 cs_height_lg_40"></div>
+        <hr>
+      </div>
+      <div class="cs_height_64 cs_height_lg_40"></div>
+    </section>
+    <!-- End Testimonial Section -->
+    <!-- Start Counter Section -->
+    <div class="container">
+      <div class="cs_funfact_wrapper cs_light_gray_bg cs_radius_15 wow fadeInUp">
+        <div class="cs_funfact cs_style_1 cs_center_column">
+          <div class="cs_fs_62 cs_semibold cs_center cs_heading_color">
+            <span class="odometer" data-count-to="99"></span>
+            <span>%</span>
+          </div>
+          <p class="cs_fs_18 mb-0">Transaction Success Rate</p>
+        </div>
+        <div class="cs_funfact cs_style_1 cs_center_column">
+          <div class="cs_fs_62 cs_semibold cs_center cs_heading_color">
+            <span>$</span>
+            <span class="odometer" data-count-to="12,000"></span>
+            <span>+</span>
+          </div>
+          <p class="cs_fs_18 mb-0">Average User Savings</p>
+        </div>
+        <div class="cs_funfact cs_style_1 cs_center_column">
+          <div class="cs_fs_62 cs_semibold cs_center cs_heading_color">
+            <span class="odometer" data-count-to="85"></span>
+            <span>%</span>
+          </div>
+          <p class="cs_fs_18 mb-0">Improved Financial Growth</p>
+        </div>
+        <div class="cs_funfact cs_style_1 cs_center_column">
+          <div class="cs_fs_62 cs_semibold cs_center cs_heading_color">
+            <span class="odometer" data-count-to="50"></span>
+            <span class="cs_fs_62">K</span>
+            <span>+</span>
+          </div>
+          <p class="cs_fs_18 mb-0"> Active Users Worldwide</p>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_112 cs_height_lg_70"></div>
+    <!-- End Counter Section -->
+    <!-- Start Pricing Table -->
+    <div class="cs_gray_bg_2">
+      <div class="cs_height_112 cs_height_lg_70"></div>
+      <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+        <div class="cs_section_heading_style_2 text-center">
+          <p class="cs_section_minititle cs_badge cs_fs_16 cs_accent_color cs_semibold cs_white_bg cs_mb_16">Pricing</p>
+          <h2 class="cs_section_title cs_fs_48 cs_heading_color mb-0 wow fadeInDown">Transforming Financial <br> Experiences</h2>
+        </div>
+      </div>
+      <div class="cs_height_32 cs_height_lg_32"></div>
+      <div class="container wow fadeIn">
+        <div class="cs_tabs cs_fade_tabs cs_style_1">
+          <div class="cs_center cs_semibold">
+            <ul class="cs_tab_links cs_style_1 cs_white_bg cs_rounded cs_mp_0 cs_center">
+              <li>
+                <a href="#tab_one" class="cs_fs_18 cs_rounded">Monthly</a>
+              </li>
+              <li class="active">
+                <a href="#tab_two" class="cs_fs_18 cs_rounded">Annualy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cs_height_64 cs_height_lg_50"></div>
+          <div class="cs_tab_content">
+            <div id="tab_one" class="cs_tab">
+              <div class="row cs_gap_y_30">
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20" data-aos="fade-up">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$30</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/month</small>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20 cs_popular">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$60</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/month</small>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20" data-aos="fade-up">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$100</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/month</small>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div id="tab_two" class="cs_tab active">
+              <div class="row cs_gap_y_30">
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20" data-aos="fade-up">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$150</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/year</small>
+                        <span class="cs_offer_badge cs_fs_14 cs_medium">
+                          <img src="{{ asset('assets/img/save-offer.svg') }}" alt="Icon">
+                          <span class="cs_offer">Save $30</span>
+                        </span>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20 cs_popular">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$300</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/year</small>
+                        <span class="cs_offer_badge cs_fs_14 cs_medium">
+                          <img src="{{ asset('assets/img/save-offer.svg') }}" alt="Icon">
+                          <span class="cs_offer">Save $30</span>
+                        </span>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="cs_pricing_table_style_1 cs_white_bg cs_radius_20" data-aos="fade-up">
+                    <div class="cs_pricing_head">
+                      <p class="cs_plan cs_fs_24 cs_semibold cs_heading_color cs_mb_20">Starter Plan</p>
+                      <hr>
+                      <h2 class="cs_price_value cs_fs_62 cs_heading_color cs_mb_24 position-relative">
+                        <span>$500</span>
+                        <small class="cs_fs_16 cs_normal cs_body_color">/year</small>
+                        <span class="cs_offer_badge cs_fs_14 cs_medium">
+                          <img src="{{ asset('assets/img/save-offer.svg') }}" alt="Icon">
+                          <span class="cs_offer">Save $30</span>
+                        </span>
+                      </h2>
+                    </div>
+                    <ul class="cs_pricing_feature_list cs_fs_18 cs_mb_32 p-0 list-unstyled">
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Manage up to 5 accounts</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Basic analytics and reports</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Secure online transactions</span>
+                      </li>
+                      <li>
+                        <span class="cs_feature_icon cs_center"><i class="fa-solid fa-check"></i></span>
+                        <span>Standard customer support</span>
+                      </li>
+                    </ul>
+                    <a href="{{ route('contact') }}" aria-label="Buy service button" class="cs_pricing_btn cs_heading_color cs_primary_font cs_semibold"><span>Get Started</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs-height_lg_40"></div>
+    </div>
+    </div>
+    <!-- End Pricing Table -->
+    <!-- Start Blog Section -->
+    <div class="cs_height_112 cs_height_lg_70"></div>
+    <div class="container">
+      <div class="cs_section_heading_style_1">
+        <div class="cs_section_heading_left">
+          <p class="cs_section_minititle cs_badge cs_accent_color cs_semibold cs_gray_bg_2 cs_mb_16">Blog</p>
+          <h2 class="cs_section_title cs_fs_48 cs_heading_color wow fadeInDown mb-0">Insights, tips, and news about fintech</h2> 
+        </div>
+        <div class="cs_section_heading_right align-self-end">
+          <p class="cs_section_subtitle cs_light cs_body_color cs_mb_24 cs_fs_20">Stay informed with the latest insights, expert tips, and breaking news in the world of fintech.</p>
+          <a href="{{ route('blog') }}" class="cs_btn cs_style_1 cs_semibold cs_heading_color wow fadeInUp">
+            <span>View More Blog</span>
+          </a> 
+        </div>
+      </div>
+      <div class="cs_height_50 cs_height_lg_50"></div>
+      <div class="row cs_gap_y_50">
+        <div class="col-lg-4">
+          <div class="cs_post_style_1">
+            <a href="{{ route('blog.details') }}" class="cs_post_thumb cs_mb_24">
+              <img src="{{ asset('assets/img/post_img_1.webp') }}" alt="Post">
+            </a>
+            <div class="cs_post_info">
+              <ul class="cs_post_meta cs_medium cs_accent_color cs_mp_0">
+                <li> <a href="{{ route('blog.details') }}">Fintech</a></li>
+              </ul>
+              <h2 class="cs_post_title cs_semibold cs_fs_20 cs_mb_8">
+                <a href="{{ route('blog.details') }}">The Future of Fintech: Trends for 2025</a>
+              </h2>
+              <p class="cs_date cs_normal cs_fs_18 mb-0">Jun 1, 2026</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cs_post_style_1">
+            <a href="{{ route('blog.details') }}" class="cs_post_thumb cs_mb_24">
+              <img src="{{ asset('assets/img/post_img_2.webp') }}" alt="Post">
+            </a>
+            <div class="cs_post_info">
+              <ul class="cs_post_meta cs_medium cs_accent_color cs_mp_0">
+                <li> <a href="{{ route('blog.details') }}">Fintech Tips</a></li>
+              </ul>
+              <h2 class="cs_post_title cs_semibold cs_fs_20 cs_mb_8">
+                <a href="{{ route('blog.details') }}">5 Ways to Improve Your Financial Habits</a>
+              </h2>
+              <p class="cs_date cs_normal cs_fs_18 mb-0">Sep 28, 2026</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cs_post_style_1">
+            <a href="{{ route('blog.details') }}" class="cs_post_thumb cs_mb_24">
+              <img src="{{ asset('assets/img/post_img_3.webp') }}" alt="Post">
+            </a>
+            <div class="cs_post_info">
+              <ul class="cs_post_meta cs_medium cs_accent_color cs_mp_0">
+                <li> <a href="{{ route('blog.details') }}">Security</a></li>
+              </ul>
+              <h2 class="cs_post_title cs_semibold cs_fs_20 cs_mb_8">
+                <a href="{{ route('blog.details') }}">Why Security Matters in Digital Payments</a>
+              </h2>
+              <p class="cs_date cs_normal cs_fs_18 mb-0">Dec 20, 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_112 cs_height_lg_70"></div>
+    <!-- End Blog Section -->
+    <!-- Start CTA Section -->
+    <div class="container cs_cta_scroll_wrap">
+      <div class="cs_cta cs_style_1 cs_heading_bg cs_bg_filed cs_cta_scroll" data-src="{{ asset('assets/img/cta_bg.webp') }}">
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="cs_cta_in text-center">
+          <p class="cs_badge cs_fs_16 cs_white_color cs_medium cs_mb_16">Best Transaction Platform</p>
+          <h2 class="cs_cta_title cs_fs_72 cs_white_color cs_mb_32 wow fadeInDown">Ready to Take Control <br> of Your Finances?</h2>
+          <p class="cs_section_subtitle cs_light cs_white_color cs_mb_32 cs_fs_20">Sign up today and simplify your financial journey.</p>
+          <a href="{{ route('contact') }}" class="cs_btn cs_style_1 cs_semibold cs_heading_color cs_white_bg wow fadeInUp">
+            <span>Get Started Today</span>
+          </a>  
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End CTA Section -->
+    @endsection
